@@ -1,0 +1,491 @@
+<!doctype html>
+<html class="z-bxsbb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>jQuery -> js</title>
+<link rel="stylesheet" href="css/common.css">
+<!-- <link rel="stylesheet" href="highlight/prettify.css"> -->
+<script src="js/jquery.js"></script>
+</head>
+<body>
+
+<div class="mn">
+	<h2>选择器</h2>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code> (ID)</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$('#selector');</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// all<br>document.getElementById('selector');<br><br>// IE 8+<br>document.querySelector('#selector');</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code> (css)</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$('.selector');</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE 8+<br>document.querySelectorAll('.selector');<br><br>// IE 9+<br>document.getElementsByClassName('selector');</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code> (tagName)</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$('selector');</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// all<br>document.getElementsByTagName('selector');<br><br>// IE 8+<br>document.querySelectorAll('selector');</code></pre>
+			</div>
+		</div>
+	</section>
+	
+	<section>
+		<div class="col">
+			<h3>jQuery <code> (attribute)</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$('[attribute="value"]');</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE 8+<br>document.querySelectorAll('[attribute="value"]');</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code> (pseudo-class)</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$('selector:pseudo-class');</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE 8+<br>document.querySelectorAll('selector:pseudo-class');</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<h2>遍历</h2>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>children</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$(el).children();</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// ie8
+var children = [];
+for (var i = el.children.length; i--;) {
+    // 跳过注释节点
+    if (el.children[i].nodeType != 8)
+	    children.unshift(el.children[i]);
+}
+
+// IE 9+
+el.children 
+</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>each</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$els.each(function(i, el){});</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE 9+ <br>Array.prototype.forEach.call(els, function(el, i){});</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>filter</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$els.filter(function(i, $el){});</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE 9+
+Array.prototype.filter.call(els, function(el, i){});</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>find</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.find(selector);</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE 8+ 
+el.querySelectorAll(selector);</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>map</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$els.map(function(i, $el){});</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE 8+ 
+Array.prototype.map.call(els, function(el, i){});</code></pre>
+			</div>
+		</div>
+	</section>
+	
+	<section>
+		<div class="col">
+			<h3>jQuery <code>匹配元素</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.is($otherEl);</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE 8+ 
+el === otherEl</code></pre>
+			</div>
+		</div>
+	</section>
+	
+	<section>
+		<div class="col">
+			<h3>jQuery <code>匹配选择器</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.is('selector');</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE 9+ 
+var matches = function(el, selector) {
+    return (el.matches || el.matchesSelector || el.msMatchesSelector || el.mozMatchesSelector || el.webkitMatchesSelector || el.oMatchesSelector).call(el, selector);
+};
+
+matches(el, 'selector');</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>next</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.next();</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>//IE 8
+// Source: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
+if(!("nextElementSibling" in document.documentElement)){
+    Object.defineProperty(Element.prototype, "nextElementSibling", {
+        get: function(){
+            var e = this.nextSibling;
+            while(e && 1 !== e.nodeType)
+                e = e.nextSibling;
+            return e;
+        }
+    });
+}
+
+// IE 9+ 
+el.nextElementSibling</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>offsetParent 获得用于定位的第一个父元素</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.offsetParent();</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>//IE 8+
+el.offsetParent || el</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>parent 获取父元素</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.parent();</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>//IE 8+
+el.parentNode</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>prev 获取紧邻的前一个元素</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.prev();</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE8
+// Source: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
+if(!("previousElementSibling" in document.documentElement)){
+    Object.defineProperty(Element.prototype, "previousElementSibling", {
+        get: function(){
+            var e = this.previousSibling;
+            while(e && 1 !== e.nodeType)
+                e = e.previousSibling;
+            return e;
+        }
+    });
+}
+
+//IE 9+
+el.previousElementSibling</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>Siblings</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.siblings();</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE8
+var siblings = Array.prototype.slice.call(el.parentNode.children); // 把类数组对象转换成一个真正的数组
+for (var i = siblings.length; i--;) {
+  if (siblings[i] === el) {
+    siblings.splice(i, 1);
+    break;
+  }
+}
+
+//IE 9+
+Array.prototype.filter.call(el.parentNode.children, function(child){
+  return child !== el;
+});</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>slice 将匹配元素集合缩减为指定范围的子集。</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$els.slice([begin[, end]]);</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE8+
+Array.prototype.slice.call(els, [begin[, end]]);</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<h2>文档操作</h2>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>hasClass</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$els.hasClass(className)</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE8+
+function hasClass(el, cls) {  
+    return new RegExp('(^| )' + cls + '( |$)', 'gi').test(el.className);
+}  
+hasClass(el, className)
+
+// IE10+
+el.classList.contains(className);
+</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>addClass</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.addClass(className)</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE8+
+function addClass(el, cls) {
+    if (!hasClass(el, cls)) el.className += " " + cls;  
+}
+addClass(el, className)
+
+// IE10+
+el.classList.add(className);
+</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>removeClass</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.removeClass(className)</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE8+
+function removeClass(el, cls) {
+    el.className = el.className.replace(new RegExp('(^|\\b)' + cls.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+}
+addClass(el, className)
+
+// IE10+
+el.classList.remove(className);
+</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>toggleClass</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.toggleClass(className);</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE8+
+function toggleClass(el, cls){  
+    if(hasClass(el, cls)){  
+        removeClass(el, cls);  
+    }else{  
+        addClass(el, cls);  
+    }
+} 
+toggleClass(el, cls)
+
+// IE10+
+el.classList.toggle(className);
+</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>after 元素之后插入</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.after(htmlString);</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE8+
+el.insertAdjacentHTML('afterend', htmlString);</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>append 元素之后插入</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$el.after(htmlString);</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE8+
+el.insertAdjacentHTML('afterend', htmlString);</code></pre>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+<link rel="stylesheet" href="highlight/styles/default.css">
+<script src="highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
+</html>
