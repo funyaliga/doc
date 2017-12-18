@@ -122,7 +122,7 @@ el.children
 		<div class="col">
 			<h3>jQuery <code>each</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$els.each(function(i, el){});</code></pre>
+				<pre class="code"><code>$(els).each(function(i, el){});</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -137,7 +137,7 @@ el.children
 		<div class="col">
 			<h3>jQuery <code>filter</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$els.filter(function(i, $el){});</code></pre>
+				<pre class="code"><code>$(els).filter(function(i, $(el)){});</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -153,7 +153,7 @@ Array.prototype.filter.call(els, function(el, i){});</code></pre>
 		<div class="col">
 			<h3>jQuery <code>find</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.find(selector);</code></pre>
+				<pre class="code"><code>$(el).find(selector);</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -169,7 +169,7 @@ el.querySelectorAll(selector);</code></pre>
 		<div class="col">
 			<h3>jQuery <code>map</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$els.map(function(i, $el){});</code></pre>
+				<pre class="code"><code>$(els).map(function(i, $(el)){});</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -185,7 +185,7 @@ Array.prototype.map.call(els, function(el, i){});</code></pre>
 		<div class="col">
 			<h3>jQuery <code>匹配元素</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.is($otherEl);</code></pre>
+				<pre class="code"><code>$(el).is($otherEl);</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -201,7 +201,7 @@ el === otherEl</code></pre>
 		<div class="col">
 			<h3>jQuery <code>匹配选择器</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.is('selector');</code></pre>
+				<pre class="code"><code>$(el).is('selector');</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -221,7 +221,7 @@ matches(el, 'selector');</code></pre>
 		<div class="col">
 			<h3>jQuery <code>next</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.next();</code></pre>
+				<pre class="code"><code>$(el).next();</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -250,7 +250,7 @@ el.nextElementSibling</code></pre>
 		<div class="col">
 			<h3>jQuery <code>offsetParent 获得用于定位的第一个父元素</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.offsetParent();</code></pre>
+				<pre class="code"><code>$(el).offsetParent();</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -266,7 +266,7 @@ el.offsetParent || el</code></pre>
 		<div class="col">
 			<h3>jQuery <code>parent 获取父元素</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.parent();</code></pre>
+				<pre class="code"><code>$(el).parent();</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -282,7 +282,7 @@ el.parentNode</code></pre>
 		<div class="col">
 			<h3>jQuery <code>prev 获取紧邻的前一个元素</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.prev();</code></pre>
+				<pre class="code"><code>$(el).prev();</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -311,7 +311,7 @@ el.previousElementSibling</code></pre>
 		<div class="col">
 			<h3>jQuery <code>Siblings</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.siblings();</code></pre>
+				<pre class="code"><code>$(el).siblings();</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -338,7 +338,7 @@ Array.prototype.filter.call(el.parentNode.children, function(child){
 		<div class="col">
 			<h3>jQuery <code>slice 将匹配元素集合缩减为指定范围的子集。</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$els.slice([begin[, end]]);</code></pre>
+				<pre class="code"><code>$(els).slice([begin[, end]]);</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -356,7 +356,7 @@ Array.prototype.slice.call(els, [begin[, end]]);</code></pre>
 		<div class="col">
 			<h3>jQuery <code>hasClass</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$els.hasClass(className)</code></pre>
+				<pre class="code"><code>$(els).hasClass(className)</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -379,7 +379,7 @@ el.classList.contains(className);
 		<div class="col">
 			<h3>jQuery <code>addClass</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.addClass(className)</code></pre>
+				<pre class="code"><code>$(el).addClass(className)</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -402,7 +402,7 @@ el.classList.add(className);
 		<div class="col">
 			<h3>jQuery <code>removeClass</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.removeClass(className)</code></pre>
+				<pre class="code"><code>$(el).removeClass(className)</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -425,7 +425,7 @@ el.classList.remove(className);
 		<div class="col">
 			<h3>jQuery <code>toggleClass</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.toggleClass(className);</code></pre>
+				<pre class="code"><code>$(el).toggleClass(className);</code></pre>
 			</div>
 		</div>
 		<div class="col">
@@ -452,30 +452,76 @@ el.classList.toggle(className);
 		<div class="col">
 			<h3>jQuery <code>after 元素之后插入</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.after(htmlString);</code></pre>
+				<pre class="code"><code>$(el).after(htmlString)
+
+$(el).after($(newEl))</code></pre>
 			</div>
 		</div>
 		<div class="col">
 			<h3>js</h3>
 			<div class="demo">
 				<pre class="code"><code>// IE8+
-el.insertAdjacentHTML('afterend', htmlString);</code></pre>
+el.insertAdjacentHTML('afterend', htmlString);
+
+el.parentNode.insertBefore(newEl, el.nextSibling);
+</code></pre>
 			</div>
 		</div>
 	</section>
 
 	<section>
 		<div class="col">
-			<h3>jQuery <code>append 元素之后插入</code></h3>
+			<h3>jQuery <code>append 元素结尾插入</code></h3>
 			<div class="demo">
-				<pre class="code"><code>$el.after(htmlString);</code></pre>
+				<pre class="code"><code>$(parent).append(htmlString);
+
+$(parent).append($(el));</code></pre>
 			</div>
 		</div>
 		<div class="col">
 			<h3>js</h3>
 			<div class="demo">
 				<pre class="code"><code>// IE8+
-el.insertAdjacentHTML('afterend', htmlString);</code></pre>
+parent.insertAdjacentHTML('beforeend', htmlString);
+
+// IE8+
+parent.appendChild(el);</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>attr 元素之前插入</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$(el).attr('role', 'button')<br><br>$(el).attr('role')</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// 设置<br>document.getElementById('foo').setAttribute('role', 'button');<br><br>// 获取<br>document.getElementById('foo').getAttribute('role');</code></pre>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col">
+			<h3>jQuery <code>before 元素之后插入</code></h3>
+			<div class="demo">
+				<pre class="code"><code>$(el).before(htmlString)
+
+$(el).before($(newEl))</code></pre>
+			</div>
+		</div>
+		<div class="col">
+			<h3>js</h3>
+			<div class="demo">
+				<pre class="code"><code>// IE8+
+el.insertAdjacentHTML('beforebegin', htmlString);
+
+el.parentNode.insertBefore(newEl, el);
+</code></pre>
 			</div>
 		</div>
 	</section>
